@@ -83,4 +83,15 @@ class ControllerMerchant {
       // res.sendStatus(200);
     }
   }
+
+  static UpdateProduct(req, res) {
+    if (isLogin == false) {
+      res.sendStatus(401);
+      console.log('access denied');
+    } else {
+      req.params.id = id;
+      ModelMerchant.UpdateProduct(req.body, req.params.id);
+      res.sendStatus(200);
+    }
+  }
 }
