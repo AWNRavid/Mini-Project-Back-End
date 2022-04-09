@@ -88,4 +88,27 @@ class ModelMerchant {
       }
     });
   }
+
+  static ViewProduct(merch_id) {
+    const query = `select * from product_info where merchant_id = ?;`;
+    const values = [merch_id];
+
+    // connection.query(query, values, (err, result) => {
+    //   if (err) {
+    //     throw err;
+    //   } else {
+    //     console.log(result);
+    //   }
+    // });
+
+    return new Promise((resolve, reject) => {
+      connection.query(query, values, (err, result) => {
+        if (err) {
+          throw err;
+        } else {
+          resolve(result);
+        }
+      });
+    });
+  }
 }
