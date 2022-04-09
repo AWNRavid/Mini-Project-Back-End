@@ -59,4 +59,28 @@ class ControllerMerchant {
       res.sendStatus(200);
     }
   }
+
+  static ViewProduct(req, res) {
+    if (isLogin == false) {
+      res.sendStatus(401);
+      console.log('access denied');
+    } else {
+      req.params.id = id;
+      ModelMerchant.ViewProduct(req.params.id).then((result) => {
+        // console.log(result);
+        // result.array.forEach(element => {
+        //   console.log(element);
+        // });
+        if (result.length == 0) {
+          res.status(404).json('No products found');
+        } else {
+          for (let i = 0; i < result.length; i++) {
+            console.log(result[i]);
+          }
+          res.status(200).json(result);
+        }
+      });
+      // res.sendStatus(200);
+    }
+  }
 }
