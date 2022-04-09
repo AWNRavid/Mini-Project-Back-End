@@ -47,4 +47,19 @@ class ModelMerchant {
       });
     })
   }
+
+  static Login(data) {
+    const query = `select * from merchant where name = ?`;
+    const values = [data.name];
+
+    return new Promise((resolve, reject) => {
+      connection.query(query, values, (err, result) => {
+        if (err) {
+          throw err;
+        } else {
+          resolve(result);
+        }
+      });
+    });
+  }
 }
