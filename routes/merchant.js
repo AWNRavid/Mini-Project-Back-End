@@ -8,5 +8,7 @@ router.post('/login', ControllerMerchant.Login)
 router.delete('/delete-account/:id', ControllerMerchant.DeleteAccount);
 
 router.post('/add-product', ControllerMerchant.AddProduct);
+router.get('/view-product/:id', ControllerMerchant.ViewProduct);
+
 
 module.exports = router;
