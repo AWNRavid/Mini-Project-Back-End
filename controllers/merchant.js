@@ -49,4 +49,14 @@ class ControllerMerchant {
       isLogin = false;
     }
   }
+
+  static AddProduct(req, res) {
+    if (isLogin == false) {
+      res.sendStatus(401);
+      console.log('access denied');
+    } else {
+      ModelMerchant.AddProduct(req.body, id);
+      res.sendStatus(200);
+    }
+  }
 }
