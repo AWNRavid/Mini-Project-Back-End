@@ -124,6 +124,19 @@ class ModelMerchant {
       }
     });
   }
+
+  static DeleteProduct(merch_id, product_name) {
+    const query = `delete from product_info where merchant_id = ? and name = ?;`;
+    const values = [merch_id, product_name];
+
+    connection.query(query, values, (err, result) => {
+      if (err) {
+        throw err;
+      } else {
+        console.log(result);
+      }
+    });
+  }
 }
 
 module.exports = ModelMerchant;
