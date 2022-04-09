@@ -94,4 +94,17 @@ class ControllerMerchant {
       res.sendStatus(200);
     }
   }
+
+  static DeleteProduct(req, res) {
+    if (isLogin == false) {
+      res.sendStatus(401);
+      console.log('access denied');
+    } else {
+      req.params.id = id;
+      ModelMerchant.DeleteProduct(req.params.id, req.body.name).then;
+      res.sendStatus(200);
+    }
+  }
 }
+
+module.exports = ControllerMerchant;
