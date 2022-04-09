@@ -10,6 +10,6 @@ router.delete('/delete-account/:id', ControllerMerchant.DeleteAccount);
 router.post('/add-product', ControllerMerchant.AddProduct);
 router.get('/view-product/:id', ControllerMerchant.ViewProduct);
 router.put('/update-product/:id', ControllerMerchant.UpdateProduct);
-
+router.delete('/delete-product/:id', ControllerMerchant.DeleteProduct);
 
 module.exports = router;
