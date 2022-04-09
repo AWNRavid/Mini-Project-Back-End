@@ -32,4 +32,19 @@ class ModelMerchant {
     });
     // return data;
   }
+
+  static GetAllMerchant() {
+    // const query = 'select * from merchant_test';
+    const query = 'select * from merchant';
+    return new Promise((resolve, reject) => {
+      connection.query(query, (err, result) => {
+        if (err) {
+          throw err;
+        } else {
+          // console.log('Merchant list: ', result);
+          resolve(result)
+        }
+      });
+    })
+  }
 }
