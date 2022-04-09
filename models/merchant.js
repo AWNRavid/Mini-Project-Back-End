@@ -75,4 +75,17 @@ class ModelMerchant {
       }
     });
   }
+
+  static AddProduct(data, merch_id) {
+    const query = `INSERT INTO product_info (id, name, quantity, price, merchant_id) VALUES (?,?,?,?,?)`;
+    const values = [uuidv4(), data.name, data.quantity, data.price, merch_id];
+
+    connection.query(query, values, (err, result) => {
+      if (err) {
+        throw err;
+      } else {
+        console.log(result);
+      }
+    });
+  }
 }
