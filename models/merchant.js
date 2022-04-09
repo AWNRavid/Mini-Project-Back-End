@@ -111,4 +111,19 @@ class ModelMerchant {
       });
     });
   }
+
+  static UpdateProduct(data, merch_id) {
+    const query = `update product_info set name = ?, price = ?, quantity = ? where id = ? and merchant_id = ?;`;
+    const values = [data.name, data.price, data.quantity, data.id, merch_id];
+
+    connection.query(query, values, (err, result) => {
+      if (err) {
+        throw err;
+      } else {
+        console.log(result);
+      }
+    });
+  }
 }
+
+module.exports = ModelMerchant;
