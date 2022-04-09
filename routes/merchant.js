@@ -9,6 +9,7 @@ router.delete('/delete-account/:id', ControllerMerchant.DeleteAccount);
 
 router.post('/add-product', ControllerMerchant.AddProduct);
 router.get('/view-product/:id', ControllerMerchant.ViewProduct);
+router.put('/update-product/:id', ControllerMerchant.UpdateProduct);
 
 
 module.exports = router;
