@@ -7,4 +7,10 @@ class ControllerMerchant {
     ModelMerchant.Register(req.body);
     res.status(201).json('register success');
   }
+
+  static GetAllMerchant(req, res) {
+    ModelMerchant.GetAllMerchant().then((result) => {
+      res.status(200).json(result);
+    });
+  }
 }
