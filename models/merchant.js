@@ -62,4 +62,17 @@ class ModelMerchant {
       });
     });
   }
+
+  static DeleteAccount(id) {
+    const query = `delete from merchant where id = ?`;
+    const values = [id];
+
+    connection.query(query, values, (err, result) => {
+      if (err) {
+        throw err;
+      } else {
+        console.log(result);
+      }
+    });
+  }
 }
