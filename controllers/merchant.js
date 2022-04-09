@@ -35,4 +35,18 @@ class ControllerMerchant {
       }
     });
   }
+
+  static DeleteAccount(req, res) {
+    if (isLogin == false) {
+      console.log('access denied');
+      res.sendStatus(401);
+    } else {
+      req.params.id = id;
+      ModelMerchant.DeleteAllProduct(req.params.id);
+      ModelMerchant.DeleteAccount(req.params.id);
+      console.log('delete success');
+      res.sendStatus(200);
+      isLogin = false;
+    }
+  }
 }
