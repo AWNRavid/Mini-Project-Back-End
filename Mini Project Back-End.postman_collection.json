@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "3b209808-48c9-436d-8bfc-8a3520f18fec",
+		"name": "Mini Project Back-End",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"root2\",\r\n    \"name\" : \"Doni\",\r\n    \"address\": \"Sidoarjo\",\r\n    \"phone_number\": \"345702784\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/merch/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Merchant",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Acc",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/merch/delete-account/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"delete-account",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/merch/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"budi\",\r\n    \"password\": \"root\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/merch/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sandal\",\r\n    \"quantity\": 25,\r\n    \"price\": 35000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/merch/add-product",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/merch/view-product/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"view-product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sandal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/merch/delete-product/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"delete-product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sampo\",\r\n    \"price\": 5000,\r\n    \"quantity\": 5,\r\n    \"id\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/merch/update-product/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merch",
+						"update-product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
